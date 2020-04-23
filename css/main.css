@@ -272,6 +272,10 @@ body {
     margin-left: 0;
   }
 
+  .wrapper .main-container .header {
+    min-height: auto;
+  }
+
   .header img {
     width: 250px;
     height: 250px;
