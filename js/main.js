@@ -35,4 +35,28 @@ $(document).ready(function(){
       }
     }
   });
+
+  // Highlight sidebar items on scroll
+  $(window).on('scroll', function() {
+    $('.section').each(function(i) {
+      if($(window).scrollTop() >= $(this).position().top) {
+        $('.sidebar li').removeClass('active');
+        $('.sidebar li').eq(i).addClass('active');
+      }
+    });
+  });
+  
+  // Toggle sidebar
+  const toggleBtn = document.getElementById("toggle-btn");
+  const closeBtn = document.querySelector(".close-btn");
+  const toggleNav = document.querySelector(".sidebar");
+  
+  toggleBtn.addEventListener("click", sideMenu);
+  closeBtn.addEventListener("click", sideMenu);
+  
+  function sideMenu() {
+    toggleNav.classList.toggle('open');
+  }
+
 });
+

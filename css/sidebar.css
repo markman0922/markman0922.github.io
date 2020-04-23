@@ -41,7 +41,11 @@
   color: #fff;
 }
 
-.wrapper .sidebar .social-media {
+.active {
+  background-color: #323232;
+}
+
+.social-media-icons {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -49,7 +53,7 @@
   display: flex;
 }
 
-.wrapper .sidebar .social-media a {
+.social-media-icons a {
   display: block;
   width: 40px;
   background: #323232;
@@ -60,4 +64,43 @@
   color: #c2c4c7;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+}
+
+.social-media-icons a:hover {
+  color: #323232;
+  background-color: #c2c4c7;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  .sidebar.open {
+    display: block;
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .close-btn {
+    display: block;
+    color: #c2c4c7;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .brand {
+    margin: 20px;
+  }
+  
 }
