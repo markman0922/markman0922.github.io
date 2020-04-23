@@ -276,11 +276,20 @@ body {
     min-height: 90vh;
   }
 
+  .wrapper .main-container .parallax-container {
+    min-height: 90vh;
+    background-attachment: scroll;
+  }
+
   .header img {
     width: 250px;
     height: 250px;
     padding: 10px 7.5px 10px 7.5px;
     margin: 5px 0 5px 0;
+  }
+
+  .arrow.bounce {
+    display: none;
   }
 
   .sidemenu-btn {

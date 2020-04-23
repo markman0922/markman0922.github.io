@@ -73,20 +73,30 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    display: none;
-    width: 0;
-    height: 0;
-    padding: 0;
+    width: 300px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height : 100%;
   }
 
   .sidebar.open {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
     display: block;
-    height: 100%;
-    position: fixed;
-    width: 250px;
     z-index: 1;
-    overflow-x: hidden;
-    transition: 0.5s;
   }
 
   .close-btn {

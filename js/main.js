@@ -50,9 +50,11 @@ $(document).ready(function(){
   const toggleBtn = document.getElementById("toggle-btn");
   const closeBtn = document.querySelector(".close-btn");
   const toggleNav = document.querySelector(".sidebar");
+  const navItems = document.querySelector(".sidebar-items");
   
   toggleBtn.addEventListener("click", sideMenu);
   closeBtn.addEventListener("click", sideMenu);
+  navItems.addEventListener("click", sideMenu);
   
   function sideMenu() {
     toggleNav.classList.toggle('open');
